@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="fr.optivision.argentica.ui.fragments.home.HomeFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="fr.optivision.argentica.ui.fragments.camera.CamerasFragment"
+        android:label="fragment_camera_list"
+        tools:layout="@layout/fragment_camera_list" >
+        <action
+            android:id="@+id/action_nav_camera_to_cameraAddActivity"
+            app:destination="@id/cameraAddActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_lens"
+        android:name="fr.optivision.argentica.ui.fragments.lens.show.LensFragment"
+        android:label="fragment_lens_list"
+        tools:layout="@layout/fragment_lens_list" >
+        <action
+            android:id="@+id/action_nav_lens_to_lensAddActivity"
+            app:destination="@id/lensAddActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="fr.optivision.argentica.ui.fragments.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <activity
+        android:id="@+id/sessionAddActivity"
+        android:name="fr.optivision.argentica.ui.activity.session.add.SessionAddActivity"
+        android:label="activity_session_add"
+        tools:layout="@layout/activity_session_add" />
+    <activity
+        android:id="@+id/addPhotoActivity"
+        android:name="fr.optivision.argentica.ui.activity.photo.add.AddPhotoActivity"
+        android:label="activity_add_photo"
+        tools:layout="@layout/activity_add_photo" />
+    <activity
+        android:id="@+id/sessionShowActivity"
+        android:name="fr.optivision.argentica.ui.activity.session.show.SessionShowActivity"
+        android:label="activity_session_show"
+        tools:layout="@layout/activity_session_show" />
+    <activity
+        android:id="@+id/lensAddActivity"
+        android:name="fr.optivision.argentica.ui.activity.lens.add.LensAddActivity"
+        android:label="activity_lens_add"
+        tools:layout="@layout/activity_lens_add" />
+    <activity
+        android:id="@+id/cameraAddActivity"
+        android:name="fr.optivision.argentica.ui.activity.camera.add.CameraAddActivity"
+        android:label="activity_camera_add"
+        tools:layout="@layout/activity_lens_add" />
+
+</navigation>

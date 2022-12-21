@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/backCameraBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <TextView
+        android:id="@+id/nameCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_semibold_argentica"
+        android:gravity="center"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"
+        android:singleLine="true"
+        android:text="Ajouter un objectif"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backCameraBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backCameraBtn" />
+
+    <ImageButton
+        android:id="@+id/addCameraBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_button"
+        android:elevation="5dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewDetailsCamera"
+        app:layout_constraintTop_toTopOf="@+id/cardViewDetailsCamera"
+        app:srcCompat="@drawable/ic_round_mode_edit_24"
+        app:tint="@color/text_color" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDetailsCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:elevation="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backCameraBtn">
+
+        <ImageView
+            android:id="@+id/imageCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rounded_button_pressed"
+            android:minHeight="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backCameraBtn" />
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:id="@+id/editTextNameCamera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_button_pressed"
+        android:ems="10"
+        android:fontFamily="@font/inter_argentica"
+        android:hint="Nom de l'appareil"
+        android:inputType="text"
+        android:maxLength="100"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewDetailsCamera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- animated button with duration on pressed-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <animation-list android:oneshot="true">
+            <item android:drawable="@drawable/rounded_button_pressed" android:duration="3000"/>
+            <item android:drawable="@drawable/rounded_button" android:duration="3000"/>
+        </animation-list>
+    </item>
+    <item>
+        <animation-list android:oneshot="true">
+            <item android:drawable="@drawable/rounded_button" android:duration="3000"/>
+            <item android:drawable="@drawable/rounded_button_pressed" android:duration="3000"/>
+        </animation-list>
+    </item>
+</selector>

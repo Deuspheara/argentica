@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activity.session.add.SessionAddActivity">
+
+    <ImageButton
+        android:id="@+id/checkSessionBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_check_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <ImageButton
+        android:id="@+id/backSessionBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <TextView
+        android:id="@+id/nameSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_argentica"
+        android:text="Séance"
+        android:textColor="@color/text_color"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkSessionBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkSessionBtn" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintVertical_bias="0.002">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/witnessText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Photo témoin"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerAddPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="4dp"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/witnessText" />
+
+            <ImageView
+                android:id="@+id/imageVP"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_button_pressed"
+                android:padding="32dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPagerAddPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewPagerAddPhoto"
+                app:srcCompat="@drawable/ic_round_camera_alt_24"
+                app:tint="@color/purple_700" />
+
+            <ImageButton
+                android:id="@+id/addSessionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/rounded_button"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewPagerAddPhoto"
+                app:srcCompat="@drawable/ic_round_add_24"
+                app:tint="@color/text_color" />
+
+            <TextView
+                android:id="@+id/witnessText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Titre"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPagerAddPhoto" />
+
+            <TextView
+                android:id="@+id/witnessText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Lieu"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSessionTitle" />
+
+            <TextView
+                android:id="@+id/witnessText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Date"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSessionPlace" />
+
+            <TextView
+                android:id="@+id/witnessText5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Description"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_category" />
+
+            <EditText
+                android:id="@+id/editTextSessionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_button_pressed"
+                android:ems="10"
+                android:fontFamily="@font/inter_argentica"
+                android:hint="Entrer un titre"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/witnessText2"
+                app:layout_constraintTop_toBottomOf="@+id/witnessText2" />
+
+            <EditText
+                android:id="@+id/editTextSessionPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_button_pressed"
+                android:ems="10"
+                android:fontFamily="@font/inter_argentica"
+                android:hint="Entrer un lieu"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/witnessText2"
+                app:layout_constraintTop_toBottomOf="@+id/witnessText3" />
+
+            <TextView
+                android:id="@+id/editTextSessionHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_button_pressed"
+                android:ems="10"
+                android:fontFamily="@font/inter_argentica"
+                android:padding="8dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/witnessText2"
+                app:layout_constraintTop_toBottomOf="@+id/witnessText4" />
+
+            <TextView
+                android:id="@+id/cat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_argentica"
+                android:text="Catégories"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSessionHour" />
+
+            <ImageButton
+                android:id="@+id/add_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_button"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_tv"
+                app:srcCompat="@drawable/ic_round_add_24"
+                app:tint="@color/text_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories_recyclerview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/add_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/add_category"
+                app:layout_constraintTop_toTopOf="@+id/add_category"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_spinner" />
+
+            <EditText
+                android:id="@+id/editTextSessionDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_button_pressed"
+                android:ems="10"
+                android:fontFamily="@font/inter_argentica"
+                android:hint="Entrer une description"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/witnessText2"
+                app:layout_constraintTop_toBottomOf="@+id/witnessText5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/backSessionBtn"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

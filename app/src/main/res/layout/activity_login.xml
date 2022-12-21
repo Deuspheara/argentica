@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageButton
+        android:id="@+id/backLoginBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_semibold_argentica"
+        android:gravity="center"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"
+        android:singleLine="true"
+        android:text="Connexion"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backLoginBtn" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_login"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backLoginBtn"
+        app:navGraph="@navigation/nav_login" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

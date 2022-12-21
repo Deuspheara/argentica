@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.film.show.FilmShowActivity">
+
+    <ImageButton
+        android:id="@+id/backFilmBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <ImageButton
+        android:id="@+id/edit_btn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:foreground="?actionBarItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_round_mode_edit_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_color" />
+
+    <TextView
+        android:id="@+id/nameSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_argentica"
+        android:text="Pellicule"
+        android:textColor="@color/text_color"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backFilmBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backFilmBtn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLens"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backFilmBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
